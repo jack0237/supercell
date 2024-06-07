@@ -4,6 +4,8 @@ import './nav.css'
 import Logo from '../../resource/images/Logo.png'
 import Menu from '../../resource/images/Menu.png'
 
+import { motion } from "framer-motion"
+
 interface NavProps {
   children: ReactNode;
 }
@@ -13,7 +15,12 @@ export function Nav({ children }: NavProps) {
 
     <nav className='nav' >
       <div className='nav-logo'>
-        <img src={Logo} alt="Logo" />
+        <motion.img 
+        initial= {{  x: -150 }}
+        animate={{ x: 0 }}
+        transition={{ type: "spring", stiffness: 50, duration: 1 }}
+
+        src={Logo} alt="Logo" />
         <input type="search" name="search" id="" placeholder="Search Game…" aria-label="Search through site content" />
       </div>
 

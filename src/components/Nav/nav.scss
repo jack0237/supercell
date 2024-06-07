@@ -2,13 +2,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 52px 54px;
+    padding: 50px 54px;
     font-family: "Poppins", sans-serif;
+
     .nav-logo {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 30px;
+
         input {
             padding: 15px 10px;
             background-color: #5c5c5c;
@@ -17,14 +19,13 @@
             font-weight: 500;
             outline: none;
             color: #fff;
+            transition: border-color 0.3s, box-shadow 0.3s;
 
-            transition:
-                border-color 0.3s,
-                box-shadow 0.3s;
             &:focus {
                 border-color: #ffffff;
                 box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
             }
+
             &::placeholder {
                 color: #aaa;
             }
@@ -40,13 +41,14 @@
         font-size: 18px;
         gap: 50px;
 
-        & li:nth-child(3) {
+        li:nth-child(3) {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 25px;
         }
-        & :hover {
+
+        :hover {
             cursor: pointer;
         }
     }

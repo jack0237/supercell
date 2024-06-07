@@ -4,10 +4,47 @@
 *{
   margin: 0;
   padding: 0;
-  border: none;
+  border: 0;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
   list-style: none;
+  /* outline: 1px solid red; */
+  
 }
 
 .App {
   background-color: #1E1E1E;
+  -webkit-user-select: none;
+  user-select: none;
 }
+
+/* Track */
+::-webkit-scrollbar {
+  width: 5px; /* Width of the entire scrollbar */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #99ff00; /* Color of the scroll thumb */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #5acf00; /* Color of the scroll thumb on hover */
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff; /* Color of the track */
+}
+
+/* Button */
+::-webkit-scrollbar-button {
+  display: none; /* Hide scrollbar buttons */
+}
+
+/* Corner */
+::-webkit-scrollbar-corner {
+  background: transparent; /* Color of the scrollbar corner */
+}
+
