@@ -1,50 +1,75 @@
 .scroll-container {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-    .horizontal-scroll {
-      overflow-x: scroll; // Enables horizontal scrolling
-      white-space: nowrap; // Prevents items from wrapping to the next line
-      width: 100%;
-  
-      // Hide scrollbar for Webkit-based browsers (e.g., Chrome, Safari)
-      &::-webkit-scrollbar {
-        display: none;
-      }
-  
-      // Hide scrollbar for other browsers
-      -ms-overflow-style: none;  // IE and Edge
-      scrollbar-width: none;  // Firefox
-  
-      .scroll-list {
-        display: flex; // Creates a flex container for horizontal alignment
-        margin: 0;
-        padding: 0;
-        list-style: none; // Removes default list styling
-  
-        .scroll-item {
-          display: inline-block; // Ensures items are inline
-          padding: 10px;
-          cursor: pointer;
-          transition: background-color 0.3s ease;
-  
-          .item-image {
-            width: 300px;
-            height: 170px;
-            display: block;
-            margin: 0 auto 10px auto;
-          }
-  
-          .item-title {
-            margin: 0;
-            font-size: 16px;
-            color: #ffffff;
-          }
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .horizontal-scroll {
+    overflow-x: hidden; // Hide the scrollbar
+    white-space: nowrap; // Prevent items from wrapping to the next line
+    width: 100%;
+    position: relative;
+
+    .scroll-list {
+      display: flex; // Creates a flex container for horizontal alignment
+      margin: 0;
+      padding: 0;
+      list-style: none; // Removes default list styling
+
+      .scroll-item {
+        display: inline-block; // Ensures items are inline
+        padding: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        .item-image {
+          width: 300px;
+          height: 170px;
+          display: block;
+          margin: 0 auto 10px auto;
+        }
+
+        .item-title {
+          margin: 0;
+          font-size: 16px;
+          color: #ffffff;
         }
       }
     }
   }
-  
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 10px 0px 10px;
+
+  .hero-button-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: capitalize;
+    gap: 25px;
+  }
+
+  .hero-button {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .rt {
+    transform: rotate(180deg);
+  }
+}
